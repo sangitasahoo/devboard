@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devboard-be-deployment
+  namespace: devboard
+  labels:
+    app: devboard-be
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: devboard-be
+  template:
+    metadata:
+      labels:
+        app: devboard-be
+    spec:
+      containers:
+      - name: devboard-be
+        image: sangitasahoo/devboard-be:latest
+        ports:
+        - containerPort: 8080

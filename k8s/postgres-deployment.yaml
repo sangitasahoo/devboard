@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgres-deployment
+  namespace: devboard
+  labels:
+    app: devboard-db
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: devboard-db
+  template:
+    metadata:
+      labels:
+        app: devboard-db
+    spec:
+      containers:
+      - name: devboard-db
+        image: postgres:16-alpine
+        ports:
+        - containerPort: 5432
+        env:
+          - name: POSTGRES_USER
+            valueFrom:
+              configMapKeyRef:
+                name: devboard-configmap 
+                key: POSTGRES_USER
+          - name: POSTGRES_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: devboard-secrets 
+                key: POSTGRES_PASSWORD
+          - name: POSTGRES_DB
+            valueFrom:
+              secretKeyRef:
+                name: devboard-secrets
+                key: POSTGRES_DB
+      volumes:
+        - name: init
+          configMap:
+            name: postgres-init
