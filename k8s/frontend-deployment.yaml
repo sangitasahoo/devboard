@@ -1,22 +1,30 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: devboard-fe-deployment
+  name: devboard-frontend-deployment
   namespace: devboard
   labels:
-    app: devboard-fe
+    app: devboard-frontend
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
-      app: devboard-fe
+      app: devboard-frontend
   template:
     metadata:
       labels:
-        app: devboard-fe
+        app: devboard-frontend
     spec:
       containers:
-      - name: devboard-fe
+      - name: frontend
         image: sangitasahoo/devboard-fe:latest
         ports:
         - containerPort: 5173
+
+      resources:
+        requests: # min needed
+          cpu: 150m
+          memory: 90Mi
+        limits: # max usable
+          cpu: 250m
+          memory: 128Mi  

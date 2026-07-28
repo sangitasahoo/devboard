@@ -5,7 +5,7 @@ metadata:
   namespace: devboard
 spec:
   selector:
-    app: devboard-be
+    app: devboard-backend
   ports:
     - protocol: TCP
       port: 8080
