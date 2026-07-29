@@ -1,0 +1,37 @@
+# Stage 1 containt raw code to build
+
+FROM node:24 AS builder
+
+WORKDIR /app
+
+COPY package*.json ./
+
+RUN npm install
+
+RUN npm list vite > /dev/null 2>&1 || npm install --no-save vite@5.4.11
+
+COPY . .
+
+RUN npm run build 
+
+# ------------------ 
+
+# Stage 2 only containt build code to run app
+
+FROM node:24-alpine AS runner
+
+WORKDIR /app
+
+COPY --from=builder /app/dist ./dist
+# Copy all node_modules from builder (includes vite)
+COPY --from=builder /app/node_modules ./node_modules
+
+COPY vite.preview.config.js ./vite.config.js
+
+EXPOSE 4173
+
+# Use exec form for proper signal handling
+ENTRYPOINT ["node", "--no-warnings"]
+CMD ["./node_modules/.bin/vite", "preview", "--host", "0.0.0.0", "--port", "4173"]
+
+
