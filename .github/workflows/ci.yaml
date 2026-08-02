@@ -7,7 +7,7 @@ on:
   push: 
     branches: [feat/docker]
 
-job:
+jobs:
   frontend:
     runs-on: ubuntu-latest
     steps:
