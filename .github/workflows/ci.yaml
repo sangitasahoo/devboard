@@ -1,0 +1,48 @@
+#workflow
+name: CI
+on: 
+    push:
+        branches: feat/docker
+
+jobs:
+    frontend: 
+      runs-on: ubuntu-latest  #runner
+      steps:
+        - name: Checkout Code
+          uses: actions/checkout@v7
+
+        - name: Set up latest Node.js
+          uses: actions/setup-node@v7
+          with:
+            node-version: '20' # Automatically resolves to the newest Node.js release
+            cache: 'npm'          # Speeds up your workflow by caching dependencies
+            cache-dependency-path: frontend/package-lock.json
+
+        - name: Install dependencies
+          run: npm ci --legacy-peer-deps 
+          working-directory: frontend
+
+        - name: Run linter
+          run: npm run lint
+          working-directory: frontend
+          
+        - name: Run build
+          run: npm run build
+          working-directory: frontend
+
+        - name: Run tests
+          run: npm run test
+          working-directory: frontend
+
+        - name: Login to Docker Hub
+          uses: docker/login-action@v4
+          with:
+            username: ${{ vars.DOCKERHUB_USERNAME }}
+            password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+        - name: Build and push Docker image
+          uses: docker/build-push-action@v7
+          with:
+            context: ./frontend
+            push: true
+            tags: ${{ vars.DOCKERHUB_USERNAME }}/devboard-frontend:v2
