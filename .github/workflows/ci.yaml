@@ -36,7 +36,7 @@ jobs:
       - name: Docker Setup
         uses: docker/setup-docker-action@v5
         with:
-          username: ${{ vars.DOCKERHUB_USERNAME }}
+          username: sangitasahoo
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Docker Build and Push
@@ -44,7 +44,7 @@ jobs:
         with:
           context: ./frontend
           push: true
-          tags: ${{ vars.DOCKERHUB_USERNAME }}/devboard-frontend:latest
+          tags: sangitasahoo/devboard-frontend:latest
 
 
 
