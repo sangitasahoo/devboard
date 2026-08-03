@@ -20,7 +20,7 @@ services:
 
   backend:
     container_name: "devboard-backend"
-    build: ./backend
+    image: sangitasahoo/devboard-backend:v2
     ports:
       - "${BACKEND_HOST_PORT}:${BACKEND_PORT}"
     environment:
@@ -33,7 +33,7 @@ services:
 
   frontend:
     container_name: "devboard-frontend"
-    build: ./frontend
+    image: sangitasahoo/devboard-frontend:v2
     depends_on:
       - backend
     ports:
