@@ -14,7 +14,9 @@ jobs:
     scan_secretes:
         uses: ./.github/workflows/secrete-scan.yaml
     
-    dependency-check:
+    dependency-scan:
         uses: ./.github/workflows/dependency-check.yaml
 
+    docker-check:
+        uses: ./.github/workflows/docker-scan.yaml
 
