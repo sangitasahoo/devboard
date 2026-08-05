@@ -10,4 +10,7 @@ jobs:
   
     code-quality:
         uses: ./.github/workflows/code-quality.yaml
-        
+
+    scan_secretes:
+        uses: ./.github/workflows/secrete-scan.yaml
+
