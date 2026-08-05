@@ -37,7 +37,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: job-reports
-          path: reports/govulncheck-report.txt
+          path: reports/dependencycheck-report.txt
           retention-days: 7
 
 
