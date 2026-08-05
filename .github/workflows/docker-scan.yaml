@@ -20,6 +20,3 @@ jobs:
         uses: hadolint/hadolint-action@v3.1.0
         with:
             dockerfile: ${{ matrix.folders }}/Dockerfile
-
-  docker-image-scanning:
-    needs: []
