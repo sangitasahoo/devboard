@@ -9,10 +9,10 @@ on:
 jobs:
 
     code-quality:
-        uses: ./.github/workflows/code-quality.yml
+        uses: ./.github/workflows/code-quality.yaml
 
     secret-scanning:
-        uses: ./.github/workflows/secret-scanning.yml
+        uses: ./.github/workflows/secret-scanning.yaml
 
     dependency-checks:
-        uses: ./.github/workflows/dependency-scan.yml
+        uses: ./.github/workflows/dependency-scan.yaml
