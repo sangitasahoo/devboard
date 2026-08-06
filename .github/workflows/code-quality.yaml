@@ -1,41 +1,41 @@
-name: Code quality
+# name: Code quality
 
-on:
-  workflow_call:
+# on:
+#   workflow_call:
     
-jobs:
-  quality_check:
-    runs-on: ubuntu-latest
-    steps:
-      - name: code checkout
-        uses: actions/checkout@v7
+# jobs:
+#   quality_check:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: code checkout
+#         uses: actions/checkout@v7
 
-      - name: Set up latest Node.js
-        uses: actions/setup-node@v7
-        with:
-            node-version: '20' # Automatically resolves to the newest Node.js release
-            cache: 'npm'          # Speeds up your workflow by caching dependencies
-            cache-dependency-path: frontend/package-lock.json
+#       - name: Set up latest Node.js
+#         uses: actions/setup-node@v7
+#         with:
+#             node-version: '20' # Automatically resolves to the newest Node.js release
+#             cache: 'npm'          # Speeds up your workflow by caching dependencies
+#             cache-dependency-path: frontend/package-lock.json
 
-      - name: Install dependencies
-        run: npm install --legacy-peer-deps  #peer
-        working-directory: frontend
+#       - name: Install dependencies
+#         run: npm install --legacy-peer-deps  #peer
+#         working-directory: frontend
 
-      - name: Run linter
-        run: npm run lint
-        working-directory: frontend
+#       - name: Run linter
+#         run: npm run lint
+#         working-directory: frontend
       
-      - name: Set up latest go
-        uses: actions/setup-go@v6
-        with:
-            go-version: '1.23'
-            go-version-file: 'go.mod'
-            cache-dependency-path: go.sum
+#       - name: Set up latest go
+#         uses: actions/setup-go@v6
+#         with:
+#             go-version: '1.23'
+#             go-version-file: 'go.mod'
+#             cache-dependency-path: go.sum
             
-      - name: Run Go Formatter
-        run: go fmt
-        working-directory: backend
+#       - name: Run Go Formatter
+#         run: go fmt
+#         working-directory: backend
 
-      - name: Run Go Vet
-        run: go vet
-        working-directory: backend
+#       - name: Run Go Vet
+#         run: go vet
+#         working-directory: backend

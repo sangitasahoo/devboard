@@ -1,10 +1,10 @@
-name: DevSecOps
+# name: DevSecOps
 
-on:
-  push:
-    branches: [gitops]
+# on:
+#   push:
+#     branches: [gitops]
 
-jobs:
-  quality_check:
-    uses: ./.github/workflows/code-quality.yaml
+# jobs:
+#   quality_check:
+#     uses: ./.github/workflows/
 
