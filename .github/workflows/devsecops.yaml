@@ -1,0 +1,18 @@
+# Goal - To Run End to End DevSecOps CI Pipeline
+
+name: DevSecOps
+
+on:
+    push:
+        branches: [gitops]
+
+jobs:
+
+    code-quality:
+        uses: ./.github/workflows/code-quality.yml
+
+    secret-scanning:
+        uses: ./.github/workflows/secret-scanning.yml
+
+    dependency-checks:
+        uses: ./.github/workflows/dependency-scan.yml
