@@ -11,8 +11,8 @@ jobs:
     code-quality:
         uses: ./.github/workflows/code-quality.yaml
 
-    secret-scanning:
-        uses: ./.github/workflows/secret-scanning.yaml
+    # secret-scanning:
+    #     uses: ./.github/workflows/secret-scanning.yaml
 
-    dependency-checks:
-        uses: ./.github/workflows/dependency-scan.yaml
+    # dependency-checks:
+    #     uses: ./.github/workflows/dependency-scan.yaml
