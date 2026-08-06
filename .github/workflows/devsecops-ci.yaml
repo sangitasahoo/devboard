@@ -19,4 +19,5 @@ jobs:
 
     docker-file-lint:
         uses: ./.github/workflows/docker-scan.yaml
+        secrets: inherit
 
