@@ -31,3 +31,10 @@ jobs:
     docker_push:
         uses: ./.github/workflows/docker-push.yaml
         needs: [code-quality, scan_secretes,  dependency-check, docker-file-lint, sonar_scanner, code_test]
+        secrets: inherit
+
+    deploy_code:
+        needs: [docker_push]
+        uses: ./.github/workflows/deploy.yaml
+        secrets: inherit
+
