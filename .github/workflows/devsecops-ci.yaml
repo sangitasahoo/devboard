@@ -38,3 +38,8 @@ jobs:
         uses: ./.github/workflows/deploy.yaml
         secrets: inherit
 
+    dast-scan:
+        needs: [deploy_code]
+        uses: ./.github/workflows/dast.yml
+        secrets: inherit
+
