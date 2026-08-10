@@ -22,9 +22,10 @@ WORKDIR /app
 # Copy built files from builder
 COPY --from=build /app/dist ./dist
 
-# Copy only production dependencies (skip devDependencies like esbuild, vite)
-COPY --from=build /app/package*.json ./
-RUN npm install --omit=dev --legacy-peer-deps
+# Copy all node_modules from builder (includes vite)
+COPY --from=build /app/node_modules ./node_modules
+
+COPY vite.preview.config.js ./vite.config.js
 
 EXPOSE 5173
 
