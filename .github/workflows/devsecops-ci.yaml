@@ -24,3 +24,10 @@ jobs:
     sonar_scanner:
         uses: ./.github/workflows/sonar-scan.yaml
         secrets: inherit
+
+    code_test:
+        uses: ./.github/workflows/code-test.yaml
+
+    docker_push:
+        uses: ./.github/workflows/docker-push.yaml
+        needs: [code-quality, scan_secretes,  dependency-check, docker-file-lint, sonar_scanner, code_test]
