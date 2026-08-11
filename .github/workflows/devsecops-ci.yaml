@@ -1,0 +1,45 @@
+# Goal: To Run end to end DevSecOps pipeline 
+
+name: DevSecOps
+
+on:
+  push:
+    branches: [feat/docker]
+
+jobs:
+  
+    code-quality:
+        uses: ./.github/workflows/code-quality.yaml
+
+    scan_secretes:
+        uses: ./.github/workflows/secrete-scan.yaml
+    
+    dependency-check:
+        uses: ./.github/workflows/dependency-check.yaml
+
+    docker-file-lint:
+        uses: ./.github/workflows/docker-scan.yaml
+        secrets: inherit
+
+    sonar_scanner:
+        uses: ./.github/workflows/sonar-scan.yaml
+        secrets: inherit
+
+    code_test:
+        uses: ./.github/workflows/code-test.yaml
+
+    docker_push:
+        uses: ./.github/workflows/docker-push.yaml
+        needs: [code-quality, scan_secretes,  dependency-check, docker-file-lint, sonar_scanner, code_test]
+        secrets: inherit
+
+    deploy_code:
+        needs: [docker_push]
+        uses: ./.github/workflows/deploy.yaml
+        secrets: inherit
+
+    dast-scan:
+        needs: [deploy_code]
+        uses: ./.github/workflows/dast.yaml
+        secrets: inherit
+
