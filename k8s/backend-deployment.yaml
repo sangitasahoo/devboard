@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: backend-devboard
-        image: sangitasahoo/devboard-be:latest
+        image: sangitasahoo/devboard-backend:v2
         ports:
         - containerPort: 8080
         env:

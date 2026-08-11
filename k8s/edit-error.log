@@ -1,115 +1,0 @@
-Vim: Warning: Output is not to a terminal
-[?1049h[>4;2m[?1h=[?2004h[?1004h[1;38r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[38;1H"/var/folders/0y/hm0xxfjd5qj4p9_vfw4dnvpm0000gn/T/kubectl-edit-252273673.yaml" 120L, 4889B]11;?]10;?[1;1H# Please edit the object below. Lines beginning with a '#' will be ignored,
-# and an empty file will abort the edit. If an error occurs while saving this file will be
-# reopened with the relevant failures.
-#
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  annotations:
-    deployment.kubernetes.io/revision: "1"
-    kubectl.kubernetes.io/last-applied-configuration: |[11;7H{"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{},"labels":{"k8s-app":"metrics-server"},"name":"metricss[12;1H-server","namespace":"kube-system"},"spec":{"selector":{"matchLabels":{"k8s-app":"metrics-server"}},"strategy":{"rollingUpdate":{"maa[13;1HxUnavailable":0}},"template":{"metadata":{"labels":{"k8s-app":"metrics-server"}},"spec":{"containers":[{"args":["--cert-dir=/tmp","--[14;1H-secure-port=10250","--kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname","--kubelet-use-node-status-port","--metric-ree[15;1Hsolution=15s"],"image":"registry.k8s.io/metrics-server/metrics-server:v0.9.0","imagePullPolicy":"IfNotPresent","livenessProbe":{"faii[16;1HlureThreshold":3,"httpGet":{"path":"/livez","port":"https","scheme":"HTTPS"},"periodSeconds":10},"name":"metrics-server","ports":[{""[17;1HcontainerPort":10250,"name":"https","protocol":"TCP"}],"readinessProbe":{"failureThreshold":3,"httpGet":{"path":"/readyz","port":"htt[18;1Htps","scheme":"HTTPS"},"initialDelaySeconds":20,"periodSeconds":10},"resources":{"requests":{"cpu":"100m","memory":"200Mi"}},"securii[19;1HtyContext":{"allowPrivilegeEscalation":false,"capabilities":{"drop":["ALL"]},"readOnlyRootFilesystem":true,"runAsNonRoot":true,"runAA[20;1HsUser":1000,"seccompProfile":{"type":"RuntimeDefault"}},"volumeMounts":[{"mountPath":"/tmp","name":"tmp-dir"}]}],"nodeSelector":{"kuu[21;1Hbernetes.io/os":"linux"},"priorityClassName":"system-cluster-critical","serviceAccountName":"metrics-server","volumes":[{"emptyDir"::[22;1H{},"name":"tmp-dir"}]}}}}
-  creationTimestamp: "2026-07-25T18:08:31Z"
-  generation: 1
-  labels:
-    k8s-app: metrics-server
-  name: metrics-server
-  namespace: kube-system
-  resourceVersion: "835415"
-  uid: 93dc8788-8956-452a-a3ed-4fad23156e01
-spec:
-  progressDeadlineSeconds: 600
-  replicas: 1
-  revisionHistoryLimit: 10
-  selector:
-    matchLabels:[37;7Hk8s-app: metrics-server[1;1H[?25h[?4m[27m[23m[29m[m[H[2J[?25l[1;1H# Please edit the object below. Lines beginning with a '#' will be ignored,
-# and an empty file will abort the edit. If an error occurs while saving this file will be
-# reopened with the relevant failures.
-#
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  annotations:
-    deployment.kubernetes.io/revision: "1"
-    kubectl.kubernetes.io/last-applied-configuration: |[11;7H{"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{},"labels":{"k8s-app":"metrics-server"},"name":"metricss[12;1H-server","namespace":"kube-system"},"spec":{"selector":{"matchLabels":{"k8s-app":"metrics-server"}},"strategy":{"rollingUpdate":{"maa[13;1HxUnavailable":0}},"template":{"metadata":{"labels":{"k8s-app":"metrics-server"}},"spec":{"containers":[{"args":["--cert-dir=/tmp","--[14;1H-secure-port=10250","--kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname","--kubelet-use-node-status-port","--metric-ree[15;1Hsolution=15s"],"image":"registry.k8s.io/metrics-server/metrics-server:v0.9.0","imagePullPolicy":"IfNotPresent","livenessProbe":{"faii[16;1HlureThreshold":3,"httpGet":{"path":"/livez","port":"https","scheme":"HTTPS"},"periodSeconds":10},"name":"metrics-server","ports":[{""[17;1HcontainerPort":10250,"name":"https","protocol":"TCP"}],"readinessProbe":{"failureThreshold":3,"httpGet":{"path":"/readyz","port":"htt[18;1Htps","scheme":"HTTPS"},"initialDelaySeconds":20,"periodSeconds":10},"resources":{"requests":{"cpu":"100m","memory":"200Mi"}},"securii[19;1HtyContext":{"allowPrivilegeEscalation":false,"capabilities":{"drop":["ALL"]},"readOnlyRootFilesystem":true,"runAsNonRoot":true,"runAA[20;1HsUser":1000,"seccompProfile":{"type":"RuntimeDefault"}},"volumeMounts":[{"mountPath":"/tmp","name":"tmp-dir"}]}],"nodeSelector":{"kuu[21;1Hbernetes.io/os":"linux"},"priorityClassName":"system-cluster-critical","serviceAccountName":"metrics-server","volumes":[{"emptyDir"::[22;1H{},"name":"tmp-dir"}]}}}}
-  creationTimestamp: "2026-07-25T18:08:31Z"
-  generation: 1
-  labels:
-    k8s-app: metrics-server
-  name: metrics-server
-  namespace: kube-system
-  resourceVersion: "835415"
-  uid: 93dc8788-8956-452a-a3ed-4fad23156e01
-spec:
-  progressDeadlineSeconds: 600
-  replicas: 1
-  revisionHistoryLimit: 10
-  selector:
-    matchLabels:[37;7Hk8s-app: metrics-server
-"/var/folders/0y/hm0xxfjd5qj4p9_vfw4dnvpm0000gn/T/kubectl-edit-252273673.yaml" 120L, 4889B[1;1H[?25h[?25l[38;122H~@k[1;1H[38;122H   [2;1H[?25h[?25l[38;122H~@k[2;1H[38;122H   [3;1H[?25h[?25l[38;122H~@k[3;1H[38;122H   [4;1H[?25h[?25l[38;122H~@k[4;1H[38;122H   [5;1H[?25h[?25l[38;122H~@k[5;1H[38;122H   [6;1H[?25h[?25l[38;122H~@k[6;1H[38;122H   [7;1H[?25h[?25l[38;122H~@k[7;1H[38;122H   [8;1H[?25h[?25l[38;122H~@k[8;1H[38;122H   [9;1H[?25h[?25l[38;122H~@k[9;1H[38;122H   [10;1H[?25h[?25l[38;122H~@k[10;1H[38;122H   [11;1H[?25h[?25l[38;122H~@k[11;1H[38;122H   [23;1H[?25h[?25l[38;122H~@k[23;1H[38;122H   [24;1H[?25h[?25l[38;122H~@k[24;1H[38;122H   [25;1H[?25h[?25l[38;122H~@k[25;1H[38;122H   [26;1H[?25h[?25l[38;122H~@k[26;1H[38;122H   [27;1H[?25h[?25l[38;122H~@k[27;1H[38;122H   [28;1H[?25h[?25l[38;122H~@k[28;1H[38;122H   [29;1H[?25h[?25l[38;122H~@k[29;1H[38;122H   [30;1H[?25h[?25l[38;122H~@k[30;1H[38;122H   [31;1H[?25h[?25l[38;122H~@k[31;1H[38;122H   [32;1H[?25h[?25l[38;122H~@k[32;1H[38;122H   [33;1H[?25h[?25l[38;122H~@k[33;1H[38;122H   [34;1H[?25h[?25l[38;122H~@k[34;1H[38;122H   [35;1H[?25h[?25l[38;122H~@k[35;1H[38;122H   [36;1H[?25h[?25l[38;122H~@k[36;1H[38;122H   [37;1H[?25h[?25l[38;122H~@k[37;1H[38;122H   [37;1H[1;37r[37;1H
-[1;38r[37;3Hstrategy:[38;1H[K[37;1H[?25h[?25l[38;122H~@k[37;1H[38;122H   [37;1H[1;37r[37;1H
-[1;38r[37;5HrollingUpdate:[?25h[?25l[38;122H~@k[37;1H[38;122H   [37;1H[1;37r[37;1H
-[1;38r[37;7HmaxSurge: 25%[?25h[?25l[38;122H~@k[37;1H[38;122H   [37;1H[1;37r[37;1H
-[1;38r[37;7HmaxUnavailable: 0[?25h[?25l[38;122H~@k[37;1H[38;122H   [37;1H[1;37r[37;1H
-[1;38r[37;5Htype: RollingUpdate[?25h[?25l[38;122H~@k[37;1H[38;122H   [37;1H[1;37r[37;1H
-[1;38r[37;3Htemplate:[?25h[?25l[38;122H~@k[37;1H[38;122H   [37;1H[1;37r[37;1H
-[1;38r[37;5Hmetadata:[?25h[?25l[38;122H~@k[37;1H[38;122H   [37;1H[1;37r[37;1H
-[1;38r[37;7Hlabels:[?25h[?25l[38;122H~@k[37;1H[38;122H   [37;1H[1;37r[37;1H
-[1;38r[37;9Hk8s-app: metrics-server[?25h[?25l[38;122H~@k[37;1H[38;122H   [37;1H[1;37r[37;1H
-[1;38r[37;5Hspec:[?25h[?25l[38;122H~@k[37;1H[38;122H   [26;1H[1;37r[1;1H[12M[1;38r[26;7Hcontainers:[27;7H- args:[28;9H- --cert-dir=/tmp[29;9H- --secure-port=10250[30;9H- --kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname[31;9H- --kubelet-use-node-status-port[32;9H- --metric-resolution=15s[33;9Himage: registry.k8s.io/metrics-server/metrics-server:v0.9.0[34;9HimagePullPolicy: IfNotPresent[35;9HlivenessProbe:[36;11HfailureThreshold: 3[37;11HhttpGet:[26;1H[?25h[?25l[38;122H~@k[26;1H[38;122H   [27;1H[?25h[?25l[38;122H~@k[27;1H[38;122H   [26;1H[?25h[?25l[38;122H~@k[26;1H[38;122H   [27;1H[?25h[?25l[38;122H~@k[27;1H[38;122H   [28;1H[?25h[?25l[38;122H~@k[28;1H[38;122H   [27;1H[?25h[?25l[38;122H~@k[27;1H[38;122H   [27;2H[?25h[?25l[38;122H~@k[27;2H[38;122H   [27;3H[?25h[?25l[38;122H~@k[27;3H[38;122H   [27;4H[?25h[?25l[38;122H~@k[27;4H[38;122H   [27;5H[?25h[?25l[38;122H~@k[27;5H[38;122H   [27;6H[?25h[?25l[38;122H~@k[27;6H[38;122H   [27;7H[?25h[?25l[38;122H~@k[27;7H[38;122H   [27;8H[?25h[?25l[38;122H~@k[27;8H[38;122H   [27;9H[?25h[?25l[38;122H~@k[27;9H[38;122H   [27;10H[?25h[?25l[38;122H~@k[27;10H[38;122H   [27;11H[?25h[?25l[38;122H~@k[27;11H[38;122H   [27;12H[?25h[?25l[38;122H~@k[27;12H[38;122H   [27;13H[?25h[?25l[38;122H~@k[27;13H[38;122H   [27;13H[?25h[?25l[38;122H~@k[27;13H[38;122H   [27;13H[?25h[?25l[38;122H~@k[27;13H[38;122H   [27;13H[?25h[?25l[38;122H~@k[27;13H[38;122H   [27;13H[?25h[?25l[38;122Hi[27;13H[38;122H [27;13H[38;1H[1m-- INSERT --[27;13H[?25h[m:[?25l[28;37r[28;1H[L[1;38r[28;1H[?25h[?25l[8C[?25h[?25lkubectl -n kube-system edit deployment metrics-server 2>&1 | tee edit-error.log[?25h[?25l[28;87H[K[28;87H[?25h[?25l[28;86H[K[28;86H[?25h[?25l[28;85H[K[28;85H[?25h[?25l[28;84H[K[28;84H[?25h[?25l[28;83H[K[28;83H[?25h[?25l[28;82H[K[28;82H[?25h[?25l[28;81H[K[28;81H[?25h[?25l[28;80H[K[28;80H[?25h[?25l[28;79H[K[28;79H[?25h[?25l[28;78H[K[28;78H[?25h[?25l[28;77H[K[28;77H[?25h[?25l[28;76H[K[28;76H[?25h[?25l[28;75H[K[28;75H[?25h[?25l[28;74H[K[28;74H[?25h[?25l[?25h[?25l[28;72H[K[28;72H[?25h[?25l[28;71H[K[28;71H[?25h[?25l[28;70H[K[28;70H[?25h[?25l[?25h[?25l[28;68H[K[28;68H[?25h[?25l[?25h[?25l[28;66H[K[28;66H[?25h[?25l[28;65H[K[28;65H[?25h[?25l[28;64H[K[28;64H[?25h[?25l[28;63H[K[28;63H[?25h[?25l[?25h[?25l[28;61H[K[28;61H[?25h[?25l[28;60H[K[28;60H[?25h[?25l[28;59H[K[28;59H[?25h[?25l[28;58H[K[28;58H[?25h[?25l[28;57H[K[28;57H[?25h[?25l[28;56H[K[28;56H[?25h[?25l[28;55H[K[28;55H[?25h[?25l[28;54H[K[28;54H[?25h[?25l[28;53H[K[28;53H[?25h[?25l[28;52H[K[28;52H[?25h[?25l[28;51H[K[28;51H[?25h[?25l[28;50H[K[28;50H[?25h[?25l[28;49H[K[28;49H[?25h[?25l[28;48H[K[28;48H[?25h[?25l[?25h[?25l[28;46H[K[28;46H[?25h[?25l[28;45H[K[28;45H[?25h[?25l[28;44H[K[28;44H[?25h[?25l[28;43H[K[28;43H[?25h[?25l[28;42H[K[28;42H[?25h[?25l[28;41H[K[28;41H[?25h[?25l[28;40H[K[28;40H[?25h[?25l[28;39H[K[28;39H[?25h[?25l[28;38H[K[28;38H[?25h[?25l[28;37H[K[28;37H[?25h[?25l[?25h[?25l[28;35H[K[28;35H[?25h[?25l[28;34H[K[28;34H[?25h[?25l[28;33H[K[28;33H[?25h[?25l[28;32H[K[28;32H[?25h[?25l[?25h[?25l[28;30H[K[28;30H[?25h[?25l[28;29H[K[28;29H[?25h[?25l[28;28H[K[28;28H[?25h[?25l[28;27H[K[28;27H[?25h[?25l[28;26H[K[28;26H[?25h[?25l[28;25H[K[28;25H[?25h[?25l[28;24H[K[28;24H[?25h[?25l[28;23H[K[28;23H[?25h[?25l[28;22H[K[28;22H[?25h[?25l[28;21H[K[28;21H[?25h[?25l[28;20H[K[28;20H[?25h[?25l[?25h[?25l[28;18H[K[28;18H[?25h[?25l[28;17H[K[28;17H[?25h[?25l[?25h[?25l[28;15H[K[28;15H[?25h[?25l[28;14H[K[28;14H[?25h[?25l[28;13H[K[28;13H[?25h[?25l[28;12H[K[28;12H[?25h[?25l[28;11H[K[28;11H[?25h[?25l[28;10H[K[28;10H[?25h[?25l[28;9H[K[28;9H[?25h[?25l[?25h[?25l[27;37r[37;1H
-[1;38r[27;7H- args:[37;11HhttpGet:[27;14H[?25h[?25l[28;37r[28;1H[L[1;38r[28;1H[?25h[?25l[8C[?25h[?25li[?25h[?25l[28;9H[K[28;9H[?25h[?25l[29;37r[29;1H[L[1;38r[28;9H- --kubelet-insecure-tls
-- --kubelet-preferred-address-types=InternalIP,Hostname,ExternalIP[?25h[?25l        - --kubelet-preferred-address-types=InternalIP,Hostname,ExternalIP[29;9H[?25h[38;1H[K[29;8H[?25l[38;122H^[[29;8H[?25h[?25l[38;122H  [29;9H[?25h[?25l[38;122H:[29;8H[38;122H[K[38;1H:[?25hwq[?25l[?2004l[>4;m"/private/var/folders/0y/hm0xxfjd5qj4p9_vfw4dnvpm0000gn/T/kubectl-edit-252273673.yaml" 122L, 4983B written[23;2t[23;1t
-[?1004l[?2004l[?1l>[?1049l[?25h[>4;merror: deployments.apps "metrics-server" is invalid
-Vim: Warning: Output is not to a terminal
-[?1049h[>4;2m[?1h=[?2004h[?1004h[1;38r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[38;1H"/var/folders/0y/hm0xxfjd5qj4p9_vfw4dnvpm0000gn/T/kubectl-edit-3673790103.yaml" 125L, 5158B]11;?]10;?[1;1H# Please edit the object below. Lines beginning with a '#' will be ignored,
-# and an empty file will abort the edit. If an error occurs while saving this file will be
-# reopened with the relevant failures.
-#
-# deployments.apps "metrics-server" was not valid:
-# * <nil>: Invalid value: "The edited file failed validation": yaml: line 35: found character that cannot start any token
-#
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  annotations:
-    deployment.kubernetes.io/revision: "1"
-    kubectl.kubernetes.io/last-applied-configuration: |[14;7H{"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{},"labels":{"k8s-app":"metrics-server"},"name":"metricss[15;1H-server","namespace":"kube-system"},"spec":{"selector":{"matchLabels":{"k8s-app":"metrics-server"}},"strategy":{"rollingUpdate":{"maa[16;1HxUnavailable":0}},"template":{"metadata":{"labels":{"k8s-app":"metrics-server"}},"spec":{"containers":[{"args":["--cert-dir=/tmp","--[17;1H-secure-port=10250","--kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname","--kubelet-use-node-status-port","--metric-ree[18;1Hsolution=15s"],"image":"registry.k8s.io/metrics-server/metrics-server:v0.9.0","imagePullPolicy":"IfNotPresent","livenessProbe":{"faii[19;1HlureThreshold":3,"httpGet":{"path":"/livez","port":"https","scheme":"HTTPS"},"periodSeconds":10},"name":"metrics-server","ports":[{""[20;1HcontainerPort":10250,"name":"https","protocol":"TCP"}],"readinessProbe":{"failureThreshold":3,"httpGet":{"path":"/readyz","port":"htt[21;1Htps","scheme":"HTTPS"},"initialDelaySeconds":20,"periodSeconds":10},"resources":{"requests":{"cpu":"100m","memory":"200Mi"}},"securii[22;1HtyContext":{"allowPrivilegeEscalation":false,"capabilities":{"drop":["ALL"]},"readOnlyRootFilesystem":true,"runAsNonRoot":true,"runAA[23;1HsUser":1000,"seccompProfile":{"type":"RuntimeDefault"}},"volumeMounts":[{"mountPath":"/tmp","name":"tmp-dir"}]}],"nodeSelector":{"kuu[24;1Hbernetes.io/os":"linux"},"priorityClassName":"system-cluster-critical","serviceAccountName":"metrics-server","volumes":[{"emptyDir"::[25;1H{},"name":"tmp-dir"}]}}}}
-  creationTimestamp: "2026-07-25T18:08:31Z"
-  generation: 1
-  labels:
-    k8s-app: metrics-server
-  name: metrics-server
-  namespace: kube-system
-  resourceVersion: "835415"
-  uid: 93dc8788-8956-452a-a3ed-4fad23156e01
-spec:
-  progressDeadlineSeconds: 600
-  replicas: 1
-  revisionHistoryLimit: 10[1;1H[?25h[?4m[27m[23m[29m[m[H[2J[?25l[1;1H# Please edit the object below. Lines beginning with a '#' will be ignored,
-# and an empty file will abort the edit. If an error occurs while saving this file will be
-# reopened with the relevant failures.
-#
-# deployments.apps "metrics-server" was not valid:
-# * <nil>: Invalid value: "The edited file failed validation": yaml: line 35: found character that cannot start any token
-#
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  annotations:
-    deployment.kubernetes.io/revision: "1"
-    kubectl.kubernetes.io/last-applied-configuration: |[14;7H{"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{},"labels":{"k8s-app":"metrics-server"},"name":"metricss[15;1H-server","namespace":"kube-system"},"spec":{"selector":{"matchLabels":{"k8s-app":"metrics-server"}},"strategy":{"rollingUpdate":{"maa[16;1HxUnavailable":0}},"template":{"metadata":{"labels":{"k8s-app":"metrics-server"}},"spec":{"containers":[{"args":["--cert-dir=/tmp","--[17;1H-secure-port=10250","--kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname","--kubelet-use-node-status-port","--metric-ree[18;1Hsolution=15s"],"image":"registry.k8s.io/metrics-server/metrics-server:v0.9.0","imagePullPolicy":"IfNotPresent","livenessProbe":{"faii[19;1HlureThreshold":3,"httpGet":{"path":"/livez","port":"https","scheme":"HTTPS"},"periodSeconds":10},"name":"metrics-server","ports":[{""[20;1HcontainerPort":10250,"name":"https","protocol":"TCP"}],"readinessProbe":{"failureThreshold":3,"httpGet":{"path":"/readyz","port":"htt[21;1Htps","scheme":"HTTPS"},"initialDelaySeconds":20,"periodSeconds":10},"resources":{"requests":{"cpu":"100m","memory":"200Mi"}},"securii[22;1HtyContext":{"allowPrivilegeEscalation":false,"capabilities":{"drop":["ALL"]},"readOnlyRootFilesystem":true,"runAsNonRoot":true,"runAA[23;1HsUser":1000,"seccompProfile":{"type":"RuntimeDefault"}},"volumeMounts":[{"mountPath":"/tmp","name":"tmp-dir"}]}],"nodeSelector":{"kuu[24;1Hbernetes.io/os":"linux"},"priorityClassName":"system-cluster-critical","serviceAccountName":"metrics-server","volumes":[{"emptyDir"::[25;1H{},"name":"tmp-dir"}]}}}}
-  creationTimestamp: "2026-07-25T18:08:31Z"
-  generation: 1
-  labels:
-    k8s-app: metrics-server
-  name: metrics-server
-  namespace: kube-system
-  resourceVersion: "835415"
-  uid: 93dc8788-8956-452a-a3ed-4fad23156e01
-spec:
-  progressDeadlineSeconds: 600
-  replicas: 1
-  revisionHistoryLimit: 10
-"/var/folders/0y/hm0xxfjd5qj4p9_vfw4dnvpm0000gn/T/kubectl-edit-3673790103.yaml" 125L, 5158B[1;1H[?25h[?25l[38;122H~@k[1;1H[38;122H   [2;1H[?25h[?25l[38;122H~@k[2;1H[38;122H   [3;1H[?25h[?25l[38;122H~@k[3;1H[38;122H   [4;1H[?25h[?25l[38;122H~@k[4;1H[38;122H   [5;1H[?25h[?25l[38;122H^[[5;1H[?25h[?25l[38;122H  [5;1H[?25h[?25l[38;122H:[5;1H[38;1H[K[38;1H:[?25hwq[?25l[?2004l[>4;m"/private/var/folders/0y/hm0xxfjd5qj4p9_vfw4dnvpm0000gn/T/kubectl-edit-3673790103.yaml" 125L, 5158B written[23;2t[23;1t
-[?1004l[?2004l[?1l>[?1049l[?25h[>4;mA copy of your changes has been stored to "/var/folders/0y/hm0xxfjd5qj4p9_vfw4dnvpm0000gn/T/kubectl-edit-3673790103.yaml"
-error: Edit cancelled, no valid changes were saved.
