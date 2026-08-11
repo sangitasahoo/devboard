@@ -9,7 +9,7 @@ spec:
     app: devboard-frontend
   ports:
     - protocol: TCP
-      port: 8081 #service-port
+      port: 8080 #service-port
       # By default and for convenience, the `targetPort` is set to
       # the same value as the `port` field.
       targetPort: 5173  # Pod port (container port)
