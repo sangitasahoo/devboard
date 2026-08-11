@@ -7,7 +7,7 @@ metadata:
     app: devboard-postgres
 spec:
   serviceName: postgres
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: devboard-postgres
@@ -39,10 +39,16 @@ spec:
               secretKeyRef:
                 name: devboard-secrets
                 key: POSTGRES_DB
-          
+
+          # Use a subdirectory as the data dir. When the volume is a real block
+          # device (EBS), its filesystem root contains a lost+found directory,
+          # and Postgres refuses to initdb into a non-empty mount point.
+          - name: PGDATA
+            value: /var/lib/postgresql/data/pgdata
+
         readinessProbe:
           exec:
-            command: ["sh", "-c", "pg_isready -U $(POSTGRES_USER) -d $(POSTGRES_DB)"]
+            command: ["sh", "-c", "pg_isready -U \"$POSTGRES_USER\" -d \"$POSTGRES_DB\""]
           initialDelaySeconds: 15
           periodSeconds: 10
         volumeMounts:
@@ -61,7 +67,6 @@ spec:
         name: data
         namespace: devboard
       spec:
-        storageClassName: manual
         accessModes:
           - ReadWriteOnce
         resources:
